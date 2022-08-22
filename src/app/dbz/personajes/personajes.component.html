@@ -1,0 +1,10 @@
+
+<!-- El pipe sirve para transformación visual (formato) -->
+<h3>Personajes</h3>
+<hr>
+
+<ul>
+    <li *ngFor="let personaje of personajes;">
+        {{ personaje.nombre }} - {{ personaje.poder | number }} 
+    </li>
+</ul>

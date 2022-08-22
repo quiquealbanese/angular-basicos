@@ -1,0 +1,28 @@
+<h3>Agregar <small>{{ nuevo.nombre }}</small> </h3>
+<hr>
+
+<!-- ngSubmit permite no refrescar todo el form y se debe importar el modulo de angular FormsModule -->
+<form (ngSubmit)="agregar()">
+    
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+    />
+    <!-- La forma de asignar un valor al objeto y de tomar el evento del input con cada valor ingresado 
+    [value]="nuevo.nombre"
+    (input)="cambiarNombre( $event )"
+    -->
+    
+    <input 
+        type="number" 
+        placeholder="Poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+    />
+
+    <button type="submit">
+        Agregar
+    </button>
+</form>
