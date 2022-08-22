@@ -25,4 +25,10 @@ export class MainPageComponent {
     poder: 500
   }
 
+  agregarNuevoPersonaje( argumento: Personaje ) {
+    // Para depurar es conveniente usar esto que actúa como Break Point
+    // debugger;
+    this.personajes.push( argumento );
+  }
+
 }
